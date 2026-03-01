@@ -1,0 +1,29 @@
+<?php
+require 'vendor/autoload.php';
+
+echo "Testing autoload fix...\n";
+
+$classes = [
+    'App\Controllers\ConversationController',
+    'App\Models\Conversation',
+    'App\Services\ContextBuilder',
+    'App\Utils\TokenCalculator',
+    'App\Middleware\AuthMiddleware',
+    'Config\Config'
+];
+
+foreach ($classes as $class) {
+    if (class_exists($class)) {
+        echo "✓ $class\n";
+    } else {
+        echo "✗ $class\n";
+    }
+}
+
+// Instantiate test
+try {
+    $controller = new App\Controllers\ConversationController();
+    echo "\n✓ Controller successfully instantiated!\n";
+} catch (Exception $e) {
+    echo "\n✗ Error: " . $e->getMessage() . "\n";
+}

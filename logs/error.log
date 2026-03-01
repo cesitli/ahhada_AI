@@ -1,0 +1,22 @@
+[23-Jan-2026 19:19:08 UTC] PHP Fatal error:  Uncaught Error: Class "App\Controllers\ConversationController" not found in /home/ahhada.com/public_html/s3/routes/api.php:19
+Stack trace:
+#0 /home/ahhada.com/public_html/s3/index.php(31): require_once()
+#1 {main}
+  thrown in /home/ahhada.com/public_html/s3/routes/api.php on line 19
+[23-Jan-2026 19:19:50 UTC] PHP Fatal error:  Uncaught Error: Class "App\Controllers\ConversationController" not found in /home/ahhada.com/public_html/s3/routes/api.php:19
+Stack trace:
+#0 /home/ahhada.com/public_html/s3/index.php(31): require_once()
+#1 {main}
+  thrown in /home/ahhada.com/public_html/s3/routes/api.php on line 19
+[23-Jan-2026 19:19:59 UTC] PHP Fatal error:  Uncaught Error: Class "App\Controllers\ConversationController" not found in /home/ahhada.com/public_html/s3/routes/api.php:19
+Stack trace:
+#0 /home/ahhada.com/public_html/s3/index.php(31): require_once()
+#1 {main}
+  thrown in /home/ahhada.com/public_html/s3/routes/api.php on line 19
+[23-Jan-2026 19:20:07 UTC] PHP Fatal error:  Uncaught Error: Class "App\Controllers\ConversationController" not found in /home/ahhada.com/public_html/s3/routes/api.php:19
+Stack trace:
+#0 /home/ahhada.com/public_html/s3/index.php(31): require_once()
+#1 {main}
+  thrown in /home/ahhada.com/public_html/s3/routes/api.php on line 19
+[2026-01-23 19:45:12] Dotenv\Exception\ValidationException: One or more environment variables failed assertions: DB_NAME is missing, DB_USER is missing, DB_PASS is missing. in /home/ahhada.com/public_html/s3/vendor/vlucas/phpdotenv/src/Validator.php on line 173
+Request: GET /s3/

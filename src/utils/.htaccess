@@ -1,0 +1,11 @@
+# Allow directory listing
+Options +Indexes
+IndexOptions FancyIndexing HTMLTable NameWidth=* DescriptionWidth=*
+IndexIgnore .htaccess
+
+# Allow PHP files to be viewed as source
+AddType application/x-httpd-php-source .php
+
+# Security headers
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "DENY"

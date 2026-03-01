@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Utils Directory</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Utils Directory Contents</h2>
+    <p>Generated: <?php echo date('Y-m-d H:i:s'); ?></p>
+    
+    <table>
+        <tr>
+            <th>Filename</th>
+            <th>Size</th>
+            <th>Modified</th>
+            <th>Type</th>
+        </tr>
+        <?php
+        \$files = scandir(__DIR__);
+        foreach (\$files as \$file) {
+            if (\$file != '.' && \$file != '..' && \$file != 'index.html') {
+                \$path = __DIR__ . '/' . \$file;
+                \$size = filesize(\$path);
+                \$modified = date('Y-m-d H:i:s', filemtime(\$path));
+                \$type = pathinfo(\$file, PATHINFO_EXTENSION);
+                
+                echo "<tr>
+                    <td><a href='\$file'>\$file</a></td>
+                    <td>" . number_format(\$size) . " bytes</td>
+                    <td>\$modified</td>
+                    <td>\$type</td>
+                </tr>";
+            }
+        }
+        ?>
+    </table>
+</body>
+</html>
